@@ -17,7 +17,7 @@
 - [Expressions](https://github.com/GabrielCode-Full/php-cheatsheet#expressions)
 - [Operators](https://github.com/GabrielCode-Full/php-cheatsheet#operators)
 - [Control Structures](https://github.com/GabrielCode-Full/php-cheatsheet#control-structures)
-  - [elseif/else if](https://github.com/GabrielCode-Full/php-cheatsheet#elseif-else-if)
+  - [elseif/else if](https://github.com/GabrielCode-Full/php-cheatsheet#elseifelse-if)
   - [ternary operator](https://github.com/GabrielCode-Full/php-cheatsheet#ternary-operator)
   - [switch](https://github.com/GabrielCode-Full/php-cheatsheet#switch)
   - [Alternative syntax for control structures](https://github.com/GabrielCode-Full/php-cheatsheet#alternative-syntax-for-control-structures)
@@ -36,6 +36,17 @@
     - [Variable handling](https://github.com/GabrielCode-Full/php-cheatsheet#variable-handling)
     - [String Functions](https://github.com/GabrielCode-Full/php-cheatsheet#string-functions)
     - [Array Functions](https://github.com/GabrielCode-Full/php-cheatsheet#array-functions)
+- [Classes and Objects](https://github.com/GabrielCode-Full/php-cheatsheet#classes-and-objects)
+  - [The Basics](https://github.com/GabrielCode-Full/php-cheatsheet#the-basics)
+  - [Properties](https://github.com/GabrielCode-Full/php-cheatsheet#properties)
+  - [Class Constants](https://github.com/GabrielCode-Full/php-cheatsheet#class-constants)
+  - [Constructors and Destructors](https://github.com/GabrielCode-Full/php-cheatsheet#constructors-and-destructors)
+  - [Visibility](https://github.com/GabrielCode-Full/php-cheatsheet#visibility)
+  - [Object Inheritance](https://github.com/GabrielCode-Full/php-cheatsheet#object-inheritance)
+- [Data Filtering](https://github.com/GabrielCode-Full/php-cheatsheet#data-filtering)
+    - [Types of filters](https://github.com/GabrielCode-Full/php-cheatsheet#types-of-filters)
+      - [Validate filters](https://github.com/GabrielCode-Full/php-cheatsheet#validate-filters)
+      - [Sanitize filters](https://github.com/GabrielCode-Full/php-cheatsheet#sanitize-filters)
 
 
 **PHP** (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used open source general-purpose scripting language that is especially suited for web development and can be embedded into HTML.
@@ -63,6 +74,7 @@
 * **WAMP Stack**(Windows, Apache, MySQL, and PHP)
 * **XAMPP Stack**(Apache, MariaDB, PHP, and Perl) Recommended.
 
+<hr>
 
 ## Basic Syntax  
 
@@ -120,12 +132,13 @@ The closing tag of a block of PHP code automatically implies a semicolon; you do
 
   <?php echo 'We omitted the last closing tag';
 ```
+<hr>
 
 ## Variables
 
 **_Variables_** in PHP are represented by a dollar sign followed by the name of the variable. The variable name is case-sensitive.
 
-> **Important:** it is recommended to use camelcase in declaring variables to avoid errors.
+> **Important:** It is convention to use camelcase in declaring variables.
 
 ```php
   <?php
@@ -152,21 +165,24 @@ The closing tag of a block of PHP code automatically implies a semicolon; you do
 
 PHP provides a large number of **_predefined variables_** to all scripts. The variables represent everything from external variables to built-in environment variables, last error messages to last retrieved headers.
 
-* **Superglobals** — Superglobals are built-in variables that are always available in all scopes
-* **$GLOBALS** — References all variables available in global scope
-* **$_SERVER** — Server and execution environment information
-* **$_GET** — HTTP GET variables
-* **$_POST** — HTTP POST variables
-* **$_FILES** — HTTP File Upload variables
-* **$_REQUEST** — HTTP Request variables
-* **$_SESSION** — Session variables
-* **$_ENV** — Environment variables
-* **$_COOKIE** — HTTP Cookies
-* **$php_errormsg** — The previous error message
-* **$HTTP_RAW_POST_DATA** — Raw POST data
-* **$http_response_header** — HTTP response headers
-* **$argc** — The number of arguments passed to script
-* **$argv** — Array of arguments passed to script
+Superglobals | Description
+------------ | -------------
+`$GLOBALS` | References all variables available in global scope
+`$_SERVER` | Server and execution environment information
+`$_GET` | HTTP GET variables
+`$_POST` | HTTP POST variables
+`$_FILES` | HTTP File Upload variables
+`$_REQUEST` | HTTP Request variables
+`$_SESSION` | Session variables
+`$_ENV` | Environment variables
+`$_COOKIE` | HTTP Cookies
+`$php_errormsg` | The previous error message
+`$HTTP_RAW_POST_DATA` | Raw POST data
+`$http_response_header` | HTTP response headers
+`$argc` | The number of arguments passed to script
+`$argv` | Array of arguments passed to script
+
+[Reference](https://www.php.net/manual/en/reserved.variables.php)
 
 ### Variable scope
 
@@ -244,6 +260,11 @@ Sometimes it is convenient to be able to have variable variable names. That is, 
   echo $$fullName; // Gabriel Cacayan
 ```
 
+<p align="right">
+  <a href="https://github.com/GabrielCode-Full/php-cheatsheet#fire-php-cheatsheet-octocat"> 
+  Back to top</a>
+</p>
+<hr>
 
 ## Constants
 
@@ -270,7 +291,6 @@ A **_constant_** is an identifier (name) for a simple value. As the name suggest
 
 There are nine **_magical constants_** that change depending on where they are used. For example, the value of __LINE__ depends on the line that it's used on in your script. All these "magical" constants are resolved at compile time, unlike regular constants, which are resolved at runtime. These special constants are case-insensitive and are as follows:
 
-
 Magic constants | Description
 ------------ | -------------
 `__LINE__`  | The current line number of the file.
@@ -282,6 +302,12 @@ Magic constants | Description
 `__TRAIT__` | The trait name. The trait name includes the namespace it was declared in (e.g. Foo\Bar).
 `__METHOD__`  | The class method name.
 `__NAMESPACE__`  | The name of the current namespace.
+
+<p align="right">
+  <a href="https://github.com/GabrielCode-Full/php-cheatsheet#fire-php-cheatsheet-octocat"> 
+  Back to top</a>
+</p>
+<hr>
 
 ## Data Types
 
@@ -324,6 +350,11 @@ Data Types | Description
   echo gettype($an_arr); // prints out: array
   echo gettype($a_null); // prints out: NULL
 ```
+<p align="right">
+  <a href="https://github.com/GabrielCode-Full/php-cheatsheet#fire-php-cheatsheet-octocat"> 
+  Back to top</a>
+</p>
+<hr>
 
 ## Expressions
 
@@ -337,6 +368,12 @@ Data Types | Description
   $total = $a + $b;
   echo $total; // 15
 ```
+
+<p align="right">
+  <a href="https://github.com/GabrielCode-Full/php-cheatsheet#fire-php-cheatsheet-octocat"> 
+  Back to top</a>
+</p>
+<hr>
 
 ## Operators
 
@@ -358,6 +395,12 @@ Negation `-`|  Null Coalesce `??=` | Greater than `>` |
 
 > **Note:** The pipe symbol `|` is replaced by letter `l` to avoid bug in the table. 
 
+<p align="right">
+  <a href="https://github.com/GabrielCode-Full/php-cheatsheet#fire-php-cheatsheet-octocat"> 
+  Back to top</a>
+</p>
+<hr>
+
 ## Control Structures
 
 ### elseif/else if
@@ -370,13 +413,11 @@ Negation `-`|  Null Coalesce `??=` | Greater than `>` |
 
     if ($a > $b) {
     echo "a is bigger than b";
-  } else if ($a < $b) {
+  } elseif ($a < $b) {
     echo "b is bigger than a";
   }  else {
     echo "Invalid Input!";
   }
-  
-  ?>
 ```
 
 ### ternary operator
@@ -394,6 +435,8 @@ Negation `-`|  Null Coalesce `??=` | Greater than `>` |
 ```php
 <?php
 
+    $i = 2;
+
     switch ($i) {
       case 0:
           echo "i equals 0";
@@ -405,8 +448,6 @@ Negation `-`|  Null Coalesce `??=` | Greater than `>` |
           echo "i equals 2";
           break;
   }
-
-  ?>
 ```
 
 ### Alternative syntax for control structures
@@ -436,8 +477,6 @@ PHP offers an alternative syntax for some of its control structures; namely, if,
     
     echo $a . "<br>"; 
   }
- 
-?>
 ```
 
 ### while
@@ -451,8 +490,6 @@ PHP offers an alternative syntax for some of its control structures; namely, if,
     echo $a . "<br>";
     $a++;
   }
- 
-?>
 ```
 
 ### do-while
@@ -466,8 +503,6 @@ PHP offers an alternative syntax for some of its control structures; namely, if,
       echo $a . "<br>";
       $a++;
   } while ($a < 5);
- 
-?>
 ```
 
 ### foreach 
@@ -482,8 +517,6 @@ PHP offers an alternative syntax for some of its control structures; namely, if,
     echo $value; 
 
   }
-
-?> 
 ```
 
 ### break
@@ -496,7 +529,6 @@ PHP offers an alternative syntax for some of its control structures; namely, if,
        }
        echo $i . "<br>";
     }
-?>
 ```
 
 ### continue
@@ -509,8 +541,6 @@ PHP offers an alternative syntax for some of its control structures; namely, if,
       }
     echo $i . "<br>";
   }
-
-?>
 ```
 
 ### include
@@ -557,6 +587,12 @@ PHP offers an alternative syntax for some of its control structures; namely, if,
     </body>
 </html>
 ```
+
+<p align="right">
+  <a href="https://github.com/GabrielCode-Full/php-cheatsheet#fire-php-cheatsheet-octocat"> 
+  Back to top</a>
+</p>
+<hr>
 
 ## Functions
 
@@ -807,12 +843,12 @@ Name | Description
   $arr = [1,2,3,4,5,6,7,8,9,10];
 
 
-  function removeEven($var) {
-    return $var & 1;
+  function Even($var) {
+    return $var%2 == 0;
   }
 
-  function removeOdd($var) {
-    return !($var & 1);
+  function Odd($var) {
+    return $var%2 == 1;
   }
 
   function sum($carry, $item) {
@@ -825,9 +861,9 @@ Name | Description
   }
 
   // filtering elements
-  print_r(array_filter($arr, "removeEven")); // Array ( [0] => 1 [2] => 3 [4] => 5 [6] => 7 [8] => 9 )
+  print_r(array_filter($arr, "Even")); // Array ( [1] => 2 [3] => 4 [5] => 6 [7] => 8 [9] => 10 )
   echo "<br>";
-  print_r(array_filter($arr, "removeOdd"));  // Array ( [1] => 2 [3] => 4 [5] => 6 [7] => 8 [9] => 10 )
+  print_r(array_filter($arr, "Odd"));  // Array ( [0] => 1 [2] => 3 [4] => 5 [6] => 7 [8] => 9 )
   echo "<br>";
 
   // modifying array elements
@@ -865,3 +901,216 @@ Name | Description
   // Count of element in the array
   var_dump(count($arr)); // int(10)
 ```
+
+<p align="right">
+  <a href="https://github.com/GabrielCode-Full/php-cheatsheet#fire-php-cheatsheet-octocat"> 
+  Back to top</a>
+</p>
+<hr>
+
+## Classes and Objects
+
+### The Basics
+
+Basic class definitions begin with the keyword class, followed by a class name, followed by a pair of curly braces which enclose the definitions of the properties and methods belonging to the class.
+
+```php
+  <?php
+
+   class Person {
+
+    private $fullName = "Mikasa Ackerman"; // default value for fullname
+
+    public function getName() {
+      return $this->name;
+    }
+  }
+
+
+    $person1 = new Person();
+
+    echo $person1->getName(); // Mikasa Ackerman
+```
+
+### Properties
+
+Class member variables are called properties. They are defined by using one of the keywords public, protected, or private, optionally followed by a type declaration, followed by a normal variable declaration.
+
+```php
+  <?php
+
+  class Person {
+
+    // These are called properties.
+    public $name = "Mikasa";
+    public $age = 18;
+    public $sex = "Female";
+
+    
+  }
+
+    $person1 = new Person();
+
+    echo $person1->name; // Mikasa
+    echo $person1->age; // 18
+    echo $person1->sex; // Female
+```
+
+### Class Constants
+
+It is possible to define constant values on a per-class basis remaining the same and unchangeable. Constants differ from normal variables in that you don't use the `$` symbol to declare or use them. The default visibility of class constants is public.
+
+```php
+  <?php
+
+  class Person {
+
+    const NAME = "Mikasa";
+
+    public function getName() {
+      return Person::NAME;
+    }
+  }
+
+
+    $person1 = new Person();
+
+    echo $person1->getName(); // Mikasa
+```
+
+### Constructors and Destructors
+
+PHP 5 allows developers to declare constructor methods for classes. Classes which have a constructor method call this method on each newly-created object, so it is suitable for any initialization that the object may need before it is used.
+
+```php
+  <?php
+
+
+  class Person {
+
+      public $name;
+      public $age;
+      public $sex;
+
+      public function __construct($name, $age, $sex) {
+        $this->name = $name;
+        $this->age = $age;
+        $this->sex = $sex;
+        return "$this->sex";
+      }
+      
+    }
+
+
+      $person1 = new Person("Mikasa", 19, "female");
+
+      echo $person1->name; // Mikasa
+      echo $person1->age; // 19
+      echo $person1->sex; // female
+```
+
+### Visibility
+
+The visibility of a property, a method or (as of PHP 7.1.0) a constant can be defined by prefixing the declaration with the keywords public, protected or private. Class members declared public can be accessed everywhere. Members declared protected can be accessed only within the class itself and by inheriting and parent classes. Members declared as private may only be accessed by the class that defines the member.
+
+```php
+  <?php
+
+
+  class Person {
+
+      // These are called properties.
+      public $public = "public property";
+      private $private = "private property";
+      protected $protected = "protected property";
+
+      
+    }
+
+      $person1 = new Person();
+
+      echo $person1->public; // public property
+      echo $person1->private; // Uncaught Error: Cannot access private property Person::$private
+      echo $person1->protected; //  Uncaught Error: Cannot access protected property Person
+```
+
+### Object Inheritance
+
+Inheritance is a well-established programming principle, and PHP makes use of this principle in its object model. This principle will affect the way many classes and objects relate to one another.
+
+For example, when you extend a class, the subclass inherits all of the public and protected methods from the parent class. Unless a class overrides those methods, they will retain their original functionality.
+
+This is useful for defining and abstracting functionality, and permits the implementation of additional functionality in similar objects without the need to reimplement all of the shared functionality.
+
+```php
+  <?php
+
+
+  class Person {
+
+    // Using protected visibility to give access to every subclasses
+    protected $name = "Scooby";
+
+      public function personGreeting() {
+        return "My name is $this->name and I am a person.";
+     }
+   }
+
+      
+
+
+   class Pet extends Person{
+     
+     // This method have access to the property of Person
+     public function petGreeting() {
+      return "My name is $this->name and I am a dog.";
+     }
+   
+   }   
+
+
+   $pet1 = new Pet();
+   $person1 = new Person();
+
+   echo $pet1->petGreeting(); // My name is Scooby and I am a dog.
+   echo $person1->personGreeting(); // My name is Scooby and I am a person.
+```
+
+<p align="right">
+  <a href="https://github.com/GabrielCode-Full/php-cheatsheet#fire-php-cheatsheet-octocat"> 
+  Back to top</a>
+</p>
+<hr>
+
+## Data Filtering 
+
+This extension filters data by either **validating** or **sanitizing** it. This is especially useful when the data source contains unknown (or foreign) data, like user supplied input. For example, this data may come from an HTML form.
+
+There are two main types of filtering: **validation** and **sanitization**.
+
+Validation is used to validate or check if the data meets certain qualifications. For example, passing in `FILTER_VALIDATE_EMAIL` will determine if the data is a valid email address, but will not change the data itself.
+
+
+Sanitization will sanitize the data, so it may alter it by removing undesired characters. For example, passing in `FILTER_SANITIZE_EMAIL` will remove characters that are inappropriate for an email address to contain. That said, it does not validate the data.
+
+### Types of filters 
+
+#### Validate filters
+
+ID | Description
+------------ | -------------
+`FILTER_VALIDATE_BOOLEAN` | Returns TRUE for "1", "true", "on" and "yes". Returns FALSE otherwise.
+`FILTER_VALIDATE_DOMAIN` | Validates whether the domain name label lengths are valid.
+`FILTER_VALIDATE_EMAIL` | Validates whether the value is a valid e-mail address.
+`FILTER_VALIDATE_FLOAT` | Validates value as float, optionally from the specified range, and converts to float on success.
+`FILTER_VALIDATE_INT` | Validates value as integer, optionally from the specified range, and converts to int on success.
+`FILTER_VALIDATE_IP` | Validates value as IP address, optionally only IPv4 or IPv6 or not from private or reserved ranges.
+`FILTER_VALIDATE_MAC` | Validates value as MAC address.
+`FILTER_VALIDATE_REGEXP` | Validates value against regexp, a Perl-compatible regular expression.
+`FILTER_VALIDATE_URL` | Validates value as URL (according to » [faqs](http://www.faqs.org/rfcs/rfc2396)), optionally with required components.
+
+<p align="right">
+  <a href="https://github.com/GabrielCode-Full/php-cheatsheet#fire-php-cheatsheet-octocat"> 
+  Back to top</a>
+</p>
+<hr>
