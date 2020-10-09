@@ -1,31 +1,24 @@
 <?php
 
+	// We created a class that is accesible only for the subclasses.
+	abstract class Teacher {
 
-class Person {
-
-	// Using protected visibility to give access to every subclasses
-	protected $name = "Scooby";
-
-    public function personGreeting() {
-   		return "My name is $this->name and I am a person.";
-   }
- }
-
-    
+		public function greetingsStudent() {
+			return "Hello, students!";
+		}
+	   
+	   abstract public function greetings();
+	}
 
 
- class Pet extends Person{
    
-   // This method have access to the property of Person
-   public function petGreeting() {
-   	return "My name is $this->name and I am a dog.";
-   }
- 
- }   
+    class Student extends Teacher {
 
+    	public function greetings() {
+    		return $this->greetingsStudent();
+    	}
+    }
 
- $pet1 = new Pet();
- $person1 = new Person();
-
- echo $pet1->petGreeting(); // My name is Scooby and I am a dog.
- echo $person1->personGreeting(); // My name is Scooby and I am a person.
+   
+   $students1 = new student();
+   echo $students1->greetings();

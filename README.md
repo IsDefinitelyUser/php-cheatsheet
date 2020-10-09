@@ -43,6 +43,8 @@
   - [Constructors and Destructors](https://github.com/GabrielCode-Full/php-cheatsheet#constructors-and-destructors)
   - [Visibility](https://github.com/GabrielCode-Full/php-cheatsheet#visibility)
   - [Object Inheritance](https://github.com/GabrielCode-Full/php-cheatsheet#object-inheritance)
+  - [Scope Resolution Operator (::)](https://github.com/GabrielCode-Full/php-cheatsheet#scope-resolution-operator)
+  - [Class Abstraction](https://github.com/GabrielCode-Full/php-cheatsheet#class-abstraction)
 - [Data Filtering](https://github.com/GabrielCode-Full/php-cheatsheet#data-filtering)
     - [Types of filters](https://github.com/GabrielCode-Full/php-cheatsheet#types-of-filters)
       - [Validate filters](https://github.com/GabrielCode-Full/php-cheatsheet#validate-filters)
@@ -182,13 +184,16 @@ Superglobals | Description
 `$argc` | The number of arguments passed to script
 `$argv` | Array of arguments passed to script
 
-[Reference](https://www.php.net/manual/en/reserved.variables.php)
+<p align="right">
+  <a href="https://www.php.net/manual/en/reserved.variables.php" target="_blank"> 
+  Reference</a>
+</p>
 
 ### Variable scope
 
 The scope of a variable is the context within which it is defined. For the most part all PHP variables only have a single scope.
 
-#### Local variables: The variables declared within a function are called _local variables_ to that function and has its scope only in that particular function.
+**Local variables:** The variables declared within a function are called _local variables_ to that function and has its scope only in that particular function.
 
 ```php
 <?php
@@ -199,7 +204,7 @@ The scope of a variable is the context within which it is defined. For the most 
 
 echo localVariable(); // I am a local variable
 ```
-#### Global variables: The variables declared outside a function are called _global variables_.
+**Global variables:** The variables declared outside a function are called _global variables_.
 
 ```php
 <?php
@@ -214,7 +219,7 @@ echo localVariable(); // I am a local variable
 echo globalVariable(); // I am a global variable
 ```
 
-#### Static variable: It is the characteristic of PHP to delete the variable, ones it completes its execution and the memory is freed. But sometimes we need to store the variables even after the completion of function execution. To do this we use static keyword and the variables are then called as _static variables_.
+**Static variable:** It is the characteristic of PHP to delete the variable, ones it completes its execution and the memory is freed. But sometimes we need to store the variables even after the completion of function execution. To do this we use static keyword and the variables are then called as _static variables_.
 
 ```php
 <?php
@@ -680,7 +685,10 @@ Name | Description
 `unset` | Unset a given variable
 `var_dump` | Dumps information about a variable
 
-[Reference](https://www.php.net/manual/en/book.var.php)
+<p align="right">
+  <a href="https://www.php.net/manual/en/book.var.php" target="_blank"> 
+  Reference</a>
+</p>
 
 ##### Example:
 
@@ -754,7 +762,10 @@ Name | Description
 `ucfirst()` | Make a string's first character uppercase
 `ucwords()` | Uppercase the first character of each word in a string
 
-[Reference](https://www.php.net/manual/en/book.strings.php)
+<p align="right">
+  <a href="https://www.php.net/manual/en/book.strings.php" target="_blank"> 
+  Reference</a>
+</p>
 
 ##### Example:
 
@@ -833,7 +844,10 @@ Name | Description
 `array_search()` | Searches the array for a given value and returns the first corresponding key if successful
 `array_key_exists()` | Checks if the given key or index exists in the array
 
-[Reference](https://www.php.net/manual/en/book.array.php)
+<p align="right">
+  <a href="https://www.php.net/manual/en/book.array.php" target="_blank"> 
+  Reference</a>
+</p>
 
 ##### Example:
 
@@ -912,14 +926,15 @@ Name | Description
 
 ### The Basics
 
-Basic class definitions begin with the keyword class, followed by a class name, followed by a pair of curly braces which enclose the definitions of the properties and methods belonging to the class.
+**_Basic class_** definitions begin with the keyword `class`, followed by a class name, followed by a pair of curly braces which enclose the definitions of the properties and methods belonging to the class.
 
 ```php
   <?php
 
    class Person {
 
-    private $fullName = "Mikasa Ackerman"; // default value for fullname
+    // Default value for fullname
+    private $fullName = "Mikasa Ackerman"; 
 
     public function getName() {
       return $this->name;
@@ -934,7 +949,7 @@ Basic class definitions begin with the keyword class, followed by a class name, 
 
 ### Properties
 
-Class member variables are called properties. They are defined by using one of the keywords public, protected, or private, optionally followed by a type declaration, followed by a normal variable declaration.
+Class member variables are called **_properties_**. They are defined by using one of the keywords `public`, `protected`, or `private`, optionally followed by a type declaration, followed by a normal variable declaration.
 
 ```php
   <?php
@@ -984,34 +999,31 @@ PHP 5 allows developers to declare constructor methods for classes. Classes whic
 
 ```php
   <?php
+class Person {
 
+    public $name;
+    public $age;
+    public $sex;
 
-  class Person {
-
-      public $name;
-      public $age;
-      public $sex;
-
-      public function __construct($name, $age, $sex) {
-        $this->name = $name;
-        $this->age = $age;
-        $this->sex = $sex;
-        return "$this->sex";
-      }
-      
+    public function __construct($name, $age, $sex) {
+      $this->name = $name;
+      $this->age = $age;
+      $this->sex = $sex;
+      return "$this->sex";
     }
+      
+  }
+    
+     $person1 = new Person("Mikasa", 19, "female");
 
-
-      $person1 = new Person("Mikasa", 19, "female");
-
-      echo $person1->name; // Mikasa
-      echo $person1->age; // 19
-      echo $person1->sex; // female
+    echo $person1->name; // Mikasa
+    echo $person1->age; // 19
+    echo $person1->sex; // female
 ```
 
 ### Visibility
 
-The visibility of a property, a method or (as of PHP 7.1.0) a constant can be defined by prefixing the declaration with the keywords public, protected or private. Class members declared public can be accessed everywhere. Members declared protected can be accessed only within the class itself and by inheriting and parent classes. Members declared as private may only be accessed by the class that defines the member.
+The **_visibility_** of a property, a method or (as of PHP 7.1.0) a constant can be defined by prefixing the declaration with the keywords public, protected or private. Class members declared public can be accessed everywhere. Members declared protected can be accessed only within the class itself and by inheriting and parent classes. Members declared as private may only be accessed by the class that defines the member.
 
 ```php
   <?php
@@ -1019,24 +1031,22 @@ The visibility of a property, a method or (as of PHP 7.1.0) a constant can be de
 
   class Person {
 
-      // These are called properties.
       public $public = "public property";
       private $private = "private property";
       protected $protected = "protected property";
 
-      
     }
 
-      $person1 = new Person();
+    $person1 = new Person();
 
-      echo $person1->public; // public property
-      echo $person1->private; // Uncaught Error: Cannot access private property Person::$private
-      echo $person1->protected; //  Uncaught Error: Cannot access protected property Person
+    echo $person1->public; // public property
+    echo $person1->private; // Uncaught Error: Cannot access private property Person::$private
+    echo $person1->protected; //  Uncaught Error: Cannot access protected property Person
 ```
 
 ### Object Inheritance
 
-Inheritance is a well-established programming principle, and PHP makes use of this principle in its object model. This principle will affect the way many classes and objects relate to one another.
+**_Inheritance_** is a well-established programming principle, and PHP makes use of this principle in its object model. This principle will affect the way many classes and objects relate to one another.
 
 For example, when you extend a class, the subclass inherits all of the public and protected methods from the parent class. Unless a class overrides those methods, they will retain their original functionality.
 
@@ -1056,9 +1066,6 @@ This is useful for defining and abstracting functionality, and permits the imple
      }
    }
 
-      
-
-
    class Pet extends Person{
      
      // This method have access to the property of Person
@@ -1076,11 +1083,107 @@ This is useful for defining and abstracting functionality, and permits the imple
    echo $person1->personGreeting(); // My name is Scooby and I am a person.
 ```
 
+### Scope Resolution Operator
+
+The **_Scope Resolution Operator_** (also called **Paamayim Nekudotayim**) or in simpler terms, the double colon, is a token that allows access to `static`, `constant`, and overridden properties or methods of a class.
+
+```php
+  <?php
+
+  class Person {
+
+    // Declaring class properties or methods as static makes them accessible without needing an instantiation of the class. A property declared as static cannot be accessed with an instantiated class object (though a static method can).
+    
+    const NAME = "Mikasa";
+    public static myName = "Gabriel";
+
+  }
+
+
+    echo Person::NAME; // Mikasa
+    echo Person::$myName; // Gabriel
+```
+> **Note:** Static properties cannot be accessed through the object using the arrow operator ->. Static properties and methods are callable without an instance of the object created, the pseudo-variable $this is not available inside the method declared as static.
+
+Three special keywords `self`, `parent` and `static` are used to access properties or methods from inside the class definition.
+
+```php
+  <?php
+
+
+  class Person {
+
+      const NAME = "Mikasa";
+      public static $myName = "Gabriel";
+
+      // self and this keyword are used to refer class members within the scope of a class.
+      public function personName() {
+        echo self::NAME. " and ". self::$myName . "<br>";
+      }
+    }
+
+
+    echo Person::NAME . "<br>"; // Mikasa
+    echo Person::$myName . "<br>"; // Gabriel
+    echo Person::personName(); // Mikasa and Gabriel
+
+
+    class Student extends Person {
+
+      public static $myName = "Eren";
+      
+      /*  
+          parent keyword are used to refer to the parent class which 
+          is the Person from the given example.
+      */
+
+      public function studentName() {
+        echo self::$myName . "<br>";
+        echo parent::$myName . "<br>";
+      }
+    }
+
+    echo Student::studentName(); // Eren
+    echo Student::studentName(); // Gabriel
+```
+
 <p align="right">
   <a href="https://github.com/GabrielCode-Full/php-cheatsheet#fire-php-cheatsheet-octocat"> 
   Back to top</a>
 </p>
 <hr>
+
+### Class Abstraction 
+
+PHP 5 introduces abstract classes and methods. Classes defined as abstract cannot be instantiated, and any class that contains at least one abstract method must also be abstract. Methods defined as abstract simply declare the method's signature - they cannot define the implementation.
+
+```php
+<?php
+
+  // We created a class that is accesible only for the subclasses.
+  abstract class Teacher {
+
+    public function greetingsStudent() {
+      return "Hello, students!";
+    }
+     
+     abstract public function greetings();
+  }
+
+
+   
+    class Student extends Teacher {
+
+      public function greetings() {
+        return $this->greetingsStudent();
+      }
+    }
+
+   
+   $students1 = new student();
+   echo $students1->greetings(); // Hello, students!
+
+```
 
 ## Data Filtering 
 
