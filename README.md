@@ -1,54 +1,54 @@
 # :fire: PHP-Cheatsheet :octocat:
 
 # Table of Contents
-- [Introduction](https://github.com/GabrielCode-Full/php-cheatsheet#fire-php-cheatsheet-octocat)
-  - [Types of installation](https://github.com/GabrielCode-Full/php-cheatsheet#types-of-installation)
-- [Basic Syntax](https://github.com/GabrielCode-Full/php-cheatsheet#basic-syntax)
-  - [PHP Tags](https://github.com/GabrielCode-Full/php-cheatsheet#php-tags)
-  - [Escaping from HTML](https://github.com/GabrielCode-Full/php-cheatsheet#escaping-from-html)
-  - [Instruction separation](https://github.com/GabrielCode-Full/php-cheatsheet#instruction-separation)
-- [Variables](https://github.com/GabrielCode-Full/php-cheatsheet#variables)
-  - [Predefined Variables](https://github.com/GabrielCode-Full/php-cheatsheet#predefined-variables)
-  - [Variable scope](https://github.com/GabrielCode-Full/php-cheatsheet#variable-scope)
-  - [Variable variables](https://github.com/GabrielCode-Full/php-cheatsheet#variable-variables)
-- [Constants](https://github.com/GabrielCode-Full/php-cheatsheet#constants)
-  - [Magic constants](https://github.com/GabrielCode-Full/php-cheatsheet#magic-constants)
-- [Data Types](https://github.com/GabrielCode-Full/php-cheatsheet#data-types)
-- [Expressions](https://github.com/GabrielCode-Full/php-cheatsheet#expressions)
-- [Operators](https://github.com/GabrielCode-Full/php-cheatsheet#operators)
-- [Control Structures](https://github.com/GabrielCode-Full/php-cheatsheet#control-structures)
-  - [elseif/else if](https://github.com/GabrielCode-Full/php-cheatsheet#elseifelse-if)
-  - [ternary operator](https://github.com/GabrielCode-Full/php-cheatsheet#ternary-operator)
-  - [switch](https://github.com/GabrielCode-Full/php-cheatsheet#switch)
-  - [Alternative syntax for control structures](https://github.com/GabrielCode-Full/php-cheatsheet#alternative-syntax-for-control-structures)
-  - [for](https://github.com/GabrielCode-Full/php-cheatsheet#for)
-  - [while](https://github.com/GabrielCode-Full/php-cheatsheet#while)
-  - [do-while](https://github.com/GabrielCode-Full/php-cheatsheet#do-while)
-  - [foreach](https://github.com/GabrielCode-Full/php-cheatsheet#foreach)
-  - [break](https://github.com/GabrielCode-Full/php-cheatsheet#break)
-  - [continue](https://github.com/GabrielCode-Full/php-cheatsheet#continue)
-  - [include](https://github.com/GabrielCode-Full/php-cheatsheet#include)
-  - [require](https://github.com/GabrielCode-Full/php-cheatsheet#require)
-- [Functions](https://github.com/GabrielCode-Full/php-cheatsheet#functions)
-  - [Anonymous functions](https://github.com/GabrielCode-Full/php-cheatsheet#anonymous-functions)
-  - [Arrow functions](https://github.com/GabrielCode-Full/php-cheatsheet#arrow-functions)
-  - [Internal (built-in) functions](https://github.com/GabrielCode-Full/php-cheatsheet#internal-built-in-functions)
-    - [Variable handling](https://github.com/GabrielCode-Full/php-cheatsheet#variable-handling)
-    - [String Functions](https://github.com/GabrielCode-Full/php-cheatsheet#string-functions)
-    - [Array Functions](https://github.com/GabrielCode-Full/php-cheatsheet#array-functions)
-- [Classes and Objects](https://github.com/GabrielCode-Full/php-cheatsheet#classes-and-objects)
-  - [The Basics](https://github.com/GabrielCode-Full/php-cheatsheet#the-basics)
-  - [Properties](https://github.com/GabrielCode-Full/php-cheatsheet#properties)
-  - [Class Constants](https://github.com/GabrielCode-Full/php-cheatsheet#class-constants)
-  - [Constructors and Destructors](https://github.com/GabrielCode-Full/php-cheatsheet#constructors-and-destructors)
-  - [Visibility](https://github.com/GabrielCode-Full/php-cheatsheet#visibility)
-  - [Object Inheritance](https://github.com/GabrielCode-Full/php-cheatsheet#object-inheritance)
-  - [Scope Resolution Operator (::)](https://github.com/GabrielCode-Full/php-cheatsheet#scope-resolution-operator)
-  - [Class Abstraction](https://github.com/GabrielCode-Full/php-cheatsheet#class-abstraction)
-- [Data Filtering](https://github.com/GabrielCode-Full/php-cheatsheet#data-filtering)
-    - [Types of filters](https://github.com/GabrielCode-Full/php-cheatsheet#types-of-filters)
-      - [Validate filters](https://github.com/GabrielCode-Full/php-cheatsheet#validate-filters)
-      - [Sanitize filters](https://github.com/GabrielCode-Full/php-cheatsheet#sanitize-filters)
+- [Introduction](https://github.com/gabriel-cacayan/php-cheatsheet#fire-php-cheatsheet-octocat)
+  - [Types of installation](https://github.com/gabriel-cacayan/php-cheatsheet#types-of-installation)
+- [Basic Syntax](https://github.com/gabriel-cacayan/php-cheatsheet#basic-syntax)
+  - [PHP Tags](https://github.com/gabriel-cacayan/php-cheatsheet#php-tags)
+  - [Escaping from HTML](https://github.com/gabriel-cacayan/php-cheatsheet#escaping-from-html)
+  - [Instruction separation](https://github.com/gabriel-cacayan/php-cheatsheet#instruction-separation)
+- [Variables](https://github.com/gabriel-cacayan/php-cheatsheet#variables)
+  - [Predefined Variables](https://github.com/gabriel-cacayan/php-cheatsheet#predefined-variables)
+  - [Variable scope](https://github.com/gabriel-cacayan/php-cheatsheet#variable-scope)
+  - [Variable variables](https://github.com/gabriel-cacayan/php-cheatsheet#variable-variables)
+- [Constants](https://github.com/gabriel-cacayan/php-cheatsheet#constants)
+  - [Magic constants](https://github.com/gabriel-cacayan/php-cheatsheet#magic-constants)
+- [Data Types](https://github.com/gabriel-cacayan/php-cheatsheet#data-types)
+- [Expressions](https://github.com/gabriel-cacayan/php-cheatsheet#expressions)
+- [Operators](https://github.com/gabriel-cacayan/php-cheatsheet#operators)
+- [Control Structures](https://github.com/gabriel-cacayan/php-cheatsheet#control-structures)
+  - [elseif/else if](https://github.com/gabriel-cacayan/php-cheatsheet#elseifelse-if)
+  - [ternary operator](https://github.com/gabriel-cacayan/php-cheatsheet#ternary-operator)
+  - [switch](https://github.com/gabriel-cacayan/php-cheatsheet#switch)
+  - [Alternative syntax for control structures](https://github.com/gabriel-cacayan/php-cheatsheet#alternative-syntax-for-control-structures)
+  - [for](https://github.com/gabriel-cacayan/php-cheatsheet#for)
+  - [while](https://github.com/gabriel-cacayan/php-cheatsheet#while)
+  - [do-while](https://github.com/gabriel-cacayan/php-cheatsheet#do-while)
+  - [foreach](https://github.com/gabriel-cacayan/php-cheatsheet#foreach)
+  - [break](https://github.com/gabriel-cacayan/php-cheatsheet#break)
+  - [continue](https://github.com/gabriel-cacayan/php-cheatsheet#continue)
+  - [include](https://github.com/gabriel-cacayan/php-cheatsheet#include)
+  - [require](https://github.com/gabriel-cacayan/php-cheatsheet#require)
+- [Functions](https://github.com/gabriel-cacayan/php-cheatsheet#functions)
+  - [Anonymous functions](https://github.com/gabriel-cacayan/php-cheatsheet#anonymous-functions)
+  - [Arrow functions](https://github.com/gabriel-cacayan/php-cheatsheet#arrow-functions)
+  - [Internal (built-in) functions](https://github.com/gabriel-cacayan/php-cheatsheet#internal-built-in-functions)
+    - [Variable handling](https://github.com/gabriel-cacayan/php-cheatsheet#variable-handling)
+    - [String Functions](https://github.com/gabriel-cacayan/php-cheatsheet#string-functions)
+    - [Array Functions](https://github.com/gabriel-cacayan/php-cheatsheet#array-functions)
+- [Classes and Objects](https://github.com/gabriel-cacayan/php-cheatsheet#classes-and-objects)
+  - [The Basics](https://github.com/gabriel-cacayan/php-cheatsheet#the-basics)
+  - [Properties](https://github.com/gabriel-cacayan/php-cheatsheet#properties)
+  - [Class Constants](https://github.com/gabriel-cacayan/php-cheatsheet#class-constants)
+  - [Constructors and Destructors](https://github.com/gabriel-cacayan/php-cheatsheet#constructors-and-destructors)
+  - [Visibility](https://github.com/gabriel-cacayan/php-cheatsheet#visibility)
+  - [Object Inheritance](https://github.com/gabriel-cacayan/php-cheatsheet#object-inheritance)
+  - [Scope Resolution Operator (::)](https://github.com/gabriel-cacayan/php-cheatsheet#scope-resolution-operator)
+  - [Class Abstraction](https://github.com/gabriel-cacayan/php-cheatsheet#class-abstraction)
+- [Data Filtering](https://github.com/gabriel-cacayan/php-cheatsheet#data-filtering)
+    - [Types of filters](https://github.com/gabriel-cacayan/php-cheatsheet#types-of-filters)
+      - [Validate filters](https://github.com/gabriel-cacayan/php-cheatsheet#validate-filters)
+      - [Sanitize filters](https://github.com/gabriel-cacayan/php-cheatsheet#sanitize-filters)
 
 
 **PHP** (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used open source general-purpose scripting language that is especially suited for web development and can be embedded into HTML.
@@ -266,7 +266,7 @@ Sometimes it is convenient to be able to have variable variable names. That is, 
 ```
 
 <p align="right">
-  <a href="https://github.com/GabrielCode-Full/php-cheatsheet#fire-php-cheatsheet-octocat"> 
+  <a href="https://github.com/gabriel-cacayan/php-cheatsheet#fire-php-cheatsheet-octocat"> 
   Back to top</a>
 </p>
 <hr>
@@ -309,7 +309,7 @@ Magic constants | Description
 `__NAMESPACE__`  | The name of the current namespace.
 
 <p align="right">
-  <a href="https://github.com/GabrielCode-Full/php-cheatsheet#fire-php-cheatsheet-octocat"> 
+  <a href="https://github.com/gabriel-cacayan/php-cheatsheet#fire-php-cheatsheet-octocat"> 
   Back to top</a>
 </p>
 <hr>
@@ -356,7 +356,7 @@ Data Types | Description
   echo gettype($a_null); // prints out: NULL
 ```
 <p align="right">
-  <a href="https://github.com/GabrielCode-Full/php-cheatsheet#fire-php-cheatsheet-octocat"> 
+  <a href="https://github.com/gabriel-cacayan/php-cheatsheet#fire-php-cheatsheet-octocat"> 
   Back to top</a>
 </p>
 <hr>
@@ -375,7 +375,7 @@ Data Types | Description
 ```
 
 <p align="right">
-  <a href="https://github.com/GabrielCode-Full/php-cheatsheet#fire-php-cheatsheet-octocat"> 
+  <a href="https://github.com/gabriel-cacayan/php-cheatsheet#fire-php-cheatsheet-octocat"> 
   Back to top</a>
 </p>
 <hr>
@@ -401,7 +401,7 @@ Negation `-`|  Null Coalesce `??=` | Greater than `>` |
 > **Note:** The pipe symbol `|` is replaced by letter `l` to avoid bug in the table. 
 
 <p align="right">
-  <a href="https://github.com/GabrielCode-Full/php-cheatsheet#fire-php-cheatsheet-octocat"> 
+  <a href="https://github.com/gabriel-cacayan/php-cheatsheet#fire-php-cheatsheet-octocat"> 
   Back to top</a>
 </p>
 <hr>
@@ -594,7 +594,7 @@ PHP offers an alternative syntax for some of its control structures; namely, if,
 ```
 
 <p align="right">
-  <a href="https://github.com/GabrielCode-Full/php-cheatsheet#fire-php-cheatsheet-octocat"> 
+  <a href="https://github.com/gabriel-cacayan/php-cheatsheet#fire-php-cheatsheet-octocat"> 
   Back to top</a>
 </p>
 <hr>
@@ -917,7 +917,7 @@ Name | Description
 ```
 
 <p align="right">
-  <a href="https://github.com/GabrielCode-Full/php-cheatsheet#fire-php-cheatsheet-octocat"> 
+  <a href="https://github.com/gabriel-cacayan/php-cheatsheet#fire-php-cheatsheet-octocat"> 
   Back to top</a>
 </p>
 <hr>
@@ -1148,7 +1148,7 @@ Three special keywords `self`, `parent` and `static` are used to access properti
 ```
 
 <p align="right">
-  <a href="https://github.com/GabrielCode-Full/php-cheatsheet#fire-php-cheatsheet-octocat"> 
+  <a href="https://github.com/gabriel-cacayan/php-cheatsheet#fire-php-cheatsheet-octocat"> 
   Back to top</a>
 </p>
 <hr>
@@ -1213,7 +1213,7 @@ ID | Description
 `FILTER_VALIDATE_URL` | Validates value as URL (according to » [faqs](http://www.faqs.org/rfcs/rfc2396)), optionally with required components.
 
 <p align="right">
-  <a href="https://github.com/GabrielCode-Full/php-cheatsheet#fire-php-cheatsheet-octocat"> 
+  <a href="https://github.com/gabriel-cacayan/php-cheatsheet#fire-php-cheatsheet-octocat"> 
   Back to top</a>
 </p>
 <hr>
