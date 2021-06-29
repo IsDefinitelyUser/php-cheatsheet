@@ -1,5 +1,3 @@
-# :fire: PHP-Cheatsheet :octocat:
-
 # Table of Contents
 - [Introduction](https://github.com/gabriel-cacayan/php-cheatsheet#fire-php-cheatsheet-octocat)
   - [Types of installation](https://github.com/gabriel-cacayan/php-cheatsheet#types-of-installation)
@@ -76,7 +74,6 @@
 * **WAMP Stack**(Windows, Apache, MySQL, and PHP)
 * **XAMPP Stack**(Apache, MariaDB, PHP, and Perl) Recommended.
 
-<hr>
 
 ## Basic Syntax  
 
@@ -134,7 +131,6 @@ The closing tag of a block of PHP code automatically implies a semicolon; you do
 
   <?php echo 'We omitted the last closing tag';
 ```
-<hr>
 
 ## Variables
 
@@ -269,7 +265,6 @@ Sometimes it is convenient to be able to have variable variable names. That is, 
   <a href="https://github.com/gabriel-cacayan/php-cheatsheet#fire-php-cheatsheet-octocat"> 
   Back to top</a>
 </p>
-<hr>
 
 ## Constants
 
@@ -312,7 +307,6 @@ Magic constants | Description
   <a href="https://github.com/gabriel-cacayan/php-cheatsheet#fire-php-cheatsheet-octocat"> 
   Back to top</a>
 </p>
-<hr>
 
 ## Data Types
 
@@ -359,7 +353,6 @@ Data Types | Description
   <a href="https://github.com/gabriel-cacayan/php-cheatsheet#fire-php-cheatsheet-octocat"> 
   Back to top</a>
 </p>
-<hr>
 
 ## Expressions
 
@@ -378,7 +371,6 @@ Data Types | Description
   <a href="https://github.com/gabriel-cacayan/php-cheatsheet#fire-php-cheatsheet-octocat"> 
   Back to top</a>
 </p>
-<hr>
 
 ## Operators
 
@@ -404,7 +396,6 @@ Negation `-`|  Null Coalesce `??=` | Greater than `>` |
   <a href="https://github.com/gabriel-cacayan/php-cheatsheet#fire-php-cheatsheet-octocat"> 
   Back to top</a>
 </p>
-<hr>
 
 ## Control Structures
 
@@ -597,7 +588,6 @@ PHP offers an alternative syntax for some of its control structures; namely, if,
   <a href="https://github.com/gabriel-cacayan/php-cheatsheet#fire-php-cheatsheet-octocat"> 
   Back to top</a>
 </p>
-<hr>
 
 ## Functions
 
@@ -920,7 +910,6 @@ Name | Description
   <a href="https://github.com/gabriel-cacayan/php-cheatsheet#fire-php-cheatsheet-octocat"> 
   Back to top</a>
 </p>
-<hr>
 
 ## Classes and Objects
 
@@ -1151,7 +1140,6 @@ Three special keywords `self`, `parent` and `static` are used to access properti
   <a href="https://github.com/gabriel-cacayan/php-cheatsheet#fire-php-cheatsheet-octocat"> 
   Back to top</a>
 </p>
-<hr>
 
 ### Class Abstraction 
 
@@ -1216,4 +1204,3 @@ ID | Description
   <a href="https://github.com/gabriel-cacayan/php-cheatsheet#fire-php-cheatsheet-octocat"> 
   Back to top</a>
 </p>
-<hr>
