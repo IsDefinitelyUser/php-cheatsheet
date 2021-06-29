@@ -82,22 +82,22 @@
 When PHP parses a file, it looks for opening and closing tags, which are `<?php` and `?>` which tell PHP to start and stop interpreting the code between them.
 
 ```php
-  <?php echo "I'm Standard tag"; ?>
+<?php echo "I'm Standard tag"; ?>
 
-  <?= "I'm Short echo tag"; ?>
+<?= "I'm Short echo tag"; ?>
 ```
 
 If a file contains only PHP code, it is preferable to omit the PHP closing tag at the end of the file. 
 
 ```php
-  <?php
-  echo "Hello world";
+<?php
+echo "Hello world";
 
-  // ... more code
+// ... more code
 
-  echo "Last statement";
+echo "Last statement";
 
-  // the script ends here with no PHP closing tag
+// the script ends here with no PHP closing tag
 ```
 
 ### Escaping from HTML 
@@ -105,17 +105,17 @@ If a file contains only PHP code, it is preferable to omit the PHP closing tag a
 Everything outside of a pair of opening and closing tags is ignored by the PHP parser which allows PHP files to have mixed content. This allows PHP to be embedded in HTML documents, for example to create templates.
 
 ```php
-  <p>This is going to be ignored by PHP and displayed by the browser.</p>
-  <?php echo 'While this is going to be parsed.'; ?>
-  <p>This will also be ignored by PHP and displayed by the browser.</p>
+<p>This is going to be ignored by PHP and displayed by the browser.</p>
+<?php echo 'While this is going to be parsed.'; ?>
+<p>This will also be ignored by PHP and displayed by the browser.</p>
 
 
-  // Example #1 Advanced escaping using conditions
-  <?php if ($expression == true): ?>
-    This will show if the expression is true.
-  <?php else: ?>
-    Otherwise this will show.
-  <?php endif; ?>
+// Example #1 Advanced escaping using conditions
+<?php if ($expression == true): ?>
+  This will show if the expression is true.
+<?php else: ?>
+  Otherwise this will show.
+<?php endif; ?>
 ```
 
 ### Instruction separation
@@ -123,13 +123,13 @@ Everything outside of a pair of opening and closing tags is ignored by the PHP p
 The closing tag of a block of PHP code automatically implies a semicolon; you do not need to have a semicolon terminating the last line of a PHP block.
 
 ```php
-  <?php
-      echo 'This is a test';
-  ?>
+<?php
+    echo 'This is a test';
+?>
 
-  <?php echo 'This is a test' ?>
+<?php echo 'This is a test' ?>
 
-  <?php echo 'We omitted the last closing tag';
+<?php echo 'We omitted the last closing tag';
 ```
 
 ## Variables
@@ -139,24 +139,24 @@ The closing tag of a block of PHP code automatically implies a semicolon; you do
 > **Important:** It is convention to use camelcase in declaring variables.
 
 ```php
-  <?php
-  $var = 'Bob';
-  $Var = 'Joe';
-  echo "$var, $Var";      // outputs "Bob, Joe"
+<?php
+$var = 'Bob';
+$Var = 'Joe';
+echo "$var, $Var";      // outputs "Bob, Joe"
 
-  $4site = 'not yet';     // invalid; starts with a number
-  $_4site = 'not yet';    // valid; starts with an underscore
-  $täyte = 'mansikka';    // valid; 'ä' is (Extended) ASCII 228.
-  ?>
+$4site = 'not yet';     // invalid; starts with a number
+$_4site = 'not yet';    // valid; starts with an underscore
+$täyte = 'mansikka';    // valid; 'ä' is (Extended) ASCII 228.
+?>
 
-  <?php
-  // Concatenating String using Double Quotes.
-  $firstName = "Mikasa";
-  $lastName = "Ackerman";
-  echo "$firstName $lastName"; // Mikasa Ackerman
-    
-  // Concatenating String using dot.
-  echo $firstName . " " . $lastName; // Mikasa Ackerman  
+<?php
+// Concatenating String using Double Quotes.
+$firstName = "Mikasa";
+$lastName = "Ackerman";
+echo "$firstName $lastName"; // Mikasa Ackerman
+  
+// Concatenating String using dot.
+echo $firstName . " " . $lastName; // Mikasa Ackerman  
 ```
 
 ### Predefined Variables
@@ -263,7 +263,8 @@ Sometimes it is convenient to be able to have variable variable names. That is, 
 
 <p align="right">
   <a href="https://github.com/gabriel-cacayan/php-cheatsheet#fire-php-cheatsheet-octocat"> 
-  Back to top</a>
+    <strong><span>&#8613;</span> Back To Top</strong>
+  </a>
 </p>
 
 ## Constants
@@ -305,7 +306,8 @@ Magic constants | Description
 
 <p align="right">
   <a href="https://github.com/gabriel-cacayan/php-cheatsheet#fire-php-cheatsheet-octocat"> 
-  Back to top</a>
+    <strong><span>&#8613;</span> Back To Top</strong>
+  </a>
 </p>
 
 ## Data Types
@@ -351,7 +353,8 @@ Data Types | Description
 ```
 <p align="right">
   <a href="https://github.com/gabriel-cacayan/php-cheatsheet#fire-php-cheatsheet-octocat"> 
-  Back to top</a>
+  <strong><span>&#8613;</span> Back To Top</strong>
+  </a>
 </p>
 
 ## Expressions
@@ -369,7 +372,8 @@ Data Types | Description
 
 <p align="right">
   <a href="https://github.com/gabriel-cacayan/php-cheatsheet#fire-php-cheatsheet-octocat"> 
-  Back to top</a>
+  <strong><span>&#8613;</span> Back To Top</strong>
+  </a>
 </p>
 
 ## Operators
@@ -394,7 +398,8 @@ Negation `-`|  Null Coalesce `??=` | Greater than `>` |
 
 <p align="right">
   <a href="https://github.com/gabriel-cacayan/php-cheatsheet#fire-php-cheatsheet-octocat"> 
-  Back to top</a>
+  <strong><span>&#8613;</span> Back To Top</strong>
+  </a>
 </p>
 
 ## Control Structures
@@ -586,7 +591,8 @@ PHP offers an alternative syntax for some of its control structures; namely, if,
 
 <p align="right">
   <a href="https://github.com/gabriel-cacayan/php-cheatsheet#fire-php-cheatsheet-octocat"> 
-  Back to top</a>
+  <strong><span>&#8613;</span> Back To Top</strong>
+  </a>
 </p>
 
 ## Functions
@@ -908,7 +914,8 @@ Name | Description
 
 <p align="right">
   <a href="https://github.com/gabriel-cacayan/php-cheatsheet#fire-php-cheatsheet-octocat"> 
-  Back to top</a>
+  <strong><span>&#8613;</span> Back To Top</strong>
+  </a>
 </p>
 
 ## Classes and Objects
@@ -1138,7 +1145,8 @@ Three special keywords `self`, `parent` and `static` are used to access properti
 
 <p align="right">
   <a href="https://github.com/gabriel-cacayan/php-cheatsheet#fire-php-cheatsheet-octocat"> 
-  Back to top</a>
+  <strong><span>&#8613;</span> Back To Top</strong>
+  </a>
 </p>
 
 ### Class Abstraction 
@@ -1202,5 +1210,6 @@ ID | Description
 
 <p align="right">
   <a href="https://github.com/gabriel-cacayan/php-cheatsheet#fire-php-cheatsheet-octocat"> 
-  Back to top</a>
+  <strong><span>&#8613;</span> Back To Top</strong>
+  </a>
 </p>
