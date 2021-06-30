@@ -1,10 +1,11 @@
 # Table of Contents
-- [Introduction](https://github.com/gabriel-cacayan/php-cheatsheet#fire-php-cheatsheet-octocat)
+- [Introduction](https://github.com/gabriel-cacayan/php-cheatsheet#table-of-contents)
   - [Types of installation](https://github.com/gabriel-cacayan/php-cheatsheet#types-of-installation)
 - [Basic Syntax](https://github.com/gabriel-cacayan/php-cheatsheet#basic-syntax)
   - [PHP Tags](https://github.com/gabriel-cacayan/php-cheatsheet#php-tags)
   - [Escaping from HTML](https://github.com/gabriel-cacayan/php-cheatsheet#escaping-from-html)
   - [Instruction separation](https://github.com/gabriel-cacayan/php-cheatsheet#instruction-separation)
+  - [Comments](https://github.com/gabriel-cacayan/php-cheatsheet#comments)
 - [Variables](https://github.com/gabriel-cacayan/php-cheatsheet#variables)
   - [Predefined Variables](https://github.com/gabriel-cacayan/php-cheatsheet#predefined-variables)
   - [Variable scope](https://github.com/gabriel-cacayan/php-cheatsheet#variable-scope)
@@ -87,7 +88,7 @@ When PHP parses a file, it looks for opening and closing tags, which are `<?php`
 <?= "I'm Short echo tag"; ?>
 ```
 
-If a file contains only PHP code, it is preferable to omit the PHP closing tag at the end of the file. 
+If a file contains only PHP code, it is preferable to omit the PHP closing tag at the end of the file. This prevents accidental whitespace or new lines being added after the PHP closing tag, which may cause unwanted effects because PHP will start output buffering when there is no intention from the programmer to send any output at that point in the script. 
 
 ```php
 <?php
@@ -120,17 +121,32 @@ Everything outside of a pair of opening and closing tags is ignored by the PHP p
 
 ### Instruction separation
 
-The closing tag of a block of PHP code automatically implies a semicolon; you do not need to have a semicolon terminating the last line of a PHP block.
+As in C or Perl, PHP requires instructions to be terminated with a semicolon at the end of each statement. The closing tag of a block of PHP code automatically implies a semicolon; you do not need to have a semicolon terminating the last line of a PHP block. The closing tag for the block will include the immediately trailing newline if one is present.
+
+```php
+<?php echo "Some text"; ?>
+No newline
+<?= "But newline now" ?>
+```
+### Comments
+
+PHP supports 'C', 'C++' and Unix shell-style (Perl style) comments. For example:
 
 ```php
 <?php
-    echo 'This is a test';
+    echo 'This is a test'; // This is a one-line c++ style comment
+    /* This is a multi line comment
+       yet another line of comment */
+    echo 'This is yet another test';
+    echo 'One Final Test'; # This is a one-line shell-style comment
 ?>
-
-<?php echo 'This is a test' ?>
-
-<?php echo 'We omitted the last closing tag';
 ```
+
+<p align="right">
+  <a href="https://github.com/gabriel-cacayan/php-cheatsheet#table-of-contents"> 
+    <strong><span>&#8613;</span> Back To Top</strong>
+  </a>
+</p>
 
 ## Variables
 
@@ -262,7 +278,7 @@ Sometimes it is convenient to be able to have variable variable names. That is, 
 ```
 
 <p align="right">
-  <a href="https://github.com/gabriel-cacayan/php-cheatsheet#fire-php-cheatsheet-octocat"> 
+  <a href="https://github.com/gabriel-cacayan/php-cheatsheet#table-of-contents"> 
     <strong><span>&#8613;</span> Back To Top</strong>
   </a>
 </p>
@@ -305,7 +321,7 @@ Magic constants | Description
 `__NAMESPACE__`  | The name of the current namespace.
 
 <p align="right">
-  <a href="https://github.com/gabriel-cacayan/php-cheatsheet#fire-php-cheatsheet-octocat"> 
+  <a href="https://github.com/gabriel-cacayan/php-cheatsheet#table-of-contents"> 
     <strong><span>&#8613;</span> Back To Top</strong>
   </a>
 </p>
@@ -352,7 +368,7 @@ Data Types | Description
   echo gettype($a_null); // prints out: NULL
 ```
 <p align="right">
-  <a href="https://github.com/gabriel-cacayan/php-cheatsheet#fire-php-cheatsheet-octocat"> 
+  <a href="https://github.com/gabriel-cacayan/php-cheatsheet#table-of-contents"> 
   <strong><span>&#8613;</span> Back To Top</strong>
   </a>
 </p>
@@ -371,7 +387,7 @@ Data Types | Description
 ```
 
 <p align="right">
-  <a href="https://github.com/gabriel-cacayan/php-cheatsheet#fire-php-cheatsheet-octocat"> 
+  <a href="https://github.com/gabriel-cacayan/php-cheatsheet#table-of-contents"> 
   <strong><span>&#8613;</span> Back To Top</strong>
   </a>
 </p>
@@ -397,7 +413,7 @@ Negation `-`|  Null Coalesce `??=` | Greater than `>` |
 > **Note:** The pipe symbol `|` is replaced by letter `l` to avoid bug in the table. 
 
 <p align="right">
-  <a href="https://github.com/gabriel-cacayan/php-cheatsheet#fire-php-cheatsheet-octocat"> 
+  <a href="https://github.com/gabriel-cacayan/php-cheatsheet#table-of-contents"> 
   <strong><span>&#8613;</span> Back To Top</strong>
   </a>
 </p>
@@ -590,7 +606,7 @@ PHP offers an alternative syntax for some of its control structures; namely, if,
 ```
 
 <p align="right">
-  <a href="https://github.com/gabriel-cacayan/php-cheatsheet#fire-php-cheatsheet-octocat"> 
+  <a href="https://github.com/gabriel-cacayan/php-cheatsheet#table-of-contents"> 
   <strong><span>&#8613;</span> Back To Top</strong>
   </a>
 </p>
@@ -913,7 +929,7 @@ Name | Description
 ```
 
 <p align="right">
-  <a href="https://github.com/gabriel-cacayan/php-cheatsheet#fire-php-cheatsheet-octocat"> 
+  <a href="https://github.com/gabriel-cacayan/php-cheatsheet#table-of-contents"> 
   <strong><span>&#8613;</span> Back To Top</strong>
   </a>
 </p>
@@ -1144,7 +1160,7 @@ Three special keywords `self`, `parent` and `static` are used to access properti
 ```
 
 <p align="right">
-  <a href="https://github.com/gabriel-cacayan/php-cheatsheet#fire-php-cheatsheet-octocat"> 
+  <a href="https://github.com/gabriel-cacayan/php-cheatsheet#table-of-contents"> 
   <strong><span>&#8613;</span> Back To Top</strong>
   </a>
 </p>
@@ -1209,7 +1225,7 @@ ID | Description
 `FILTER_VALIDATE_URL` | Validates value as URL (according to » [faqs](http://www.faqs.org/rfcs/rfc2396)), optionally with required components.
 
 <p align="right">
-  <a href="https://github.com/gabriel-cacayan/php-cheatsheet#fire-php-cheatsheet-octocat"> 
+  <a href="https://github.com/gabriel-cacayan/php-cheatsheet#table-of-contents"> 
   <strong><span>&#8613;</span> Back To Top</strong>
   </a>
 </p>
