@@ -9,7 +9,7 @@
 </head>
 
 <body>
-	<?php include "includes/00_basic_syntax.php"; ?>
+	<?php include "includes/01_data_types.php"; ?>
 </body>
 
 </html>

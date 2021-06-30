@@ -6,13 +6,13 @@
   - [Escaping from HTML](https://github.com/gabriel-cacayan/php-cheatsheet#escaping-from-html)
   - [Instruction separation](https://github.com/gabriel-cacayan/php-cheatsheet#instruction-separation)
   - [Comments](https://github.com/gabriel-cacayan/php-cheatsheet#comments)
+- [Data Types](https://github.com/gabriel-cacayan/php-cheatsheet#data-types)
 - [Variables](https://github.com/gabriel-cacayan/php-cheatsheet#variables)
   - [Predefined Variables](https://github.com/gabriel-cacayan/php-cheatsheet#predefined-variables)
   - [Variable scope](https://github.com/gabriel-cacayan/php-cheatsheet#variable-scope)
   - [Variable variables](https://github.com/gabriel-cacayan/php-cheatsheet#variable-variables)
 - [Constants](https://github.com/gabriel-cacayan/php-cheatsheet#constants)
   - [Magic constants](https://github.com/gabriel-cacayan/php-cheatsheet#magic-constants)
-- [Data Types](https://github.com/gabriel-cacayan/php-cheatsheet#data-types)
 - [Expressions](https://github.com/gabriel-cacayan/php-cheatsheet#expressions)
 - [Operators](https://github.com/gabriel-cacayan/php-cheatsheet#operators)
 - [Control Structures](https://github.com/gabriel-cacayan/php-cheatsheet#control-structures)
@@ -145,6 +145,55 @@ PHP supports 'C', 'C++' and Unix shell-style (Perl style) comments. For example:
 <p align="right">
   <a href="https://github.com/gabriel-cacayan/php-cheatsheet#table-of-contents"> 
     <strong><span>&#8613;</span> Back To Top</strong>
+  </a>
+</p>
+
+## Data Types
+
+PHP supports ten primitive types.
+
+**Four scalar types:** **_boolean_**, **_integer_**, **_float (floating-point number, aka double)_**, & **_string_**.
+
+**Four compound types:** **_array_**, **_object_**, **_callable_**, & **_iterable_**.
+
+**Special types:** **_resource_** and  **_NULL_**.
+
+Data Types | Description
+------------ | -------------
+`boolean` | A boolean expresses a truth value. It can be either TRUE or FALSE.
+`integer` | An integer is a number of the set ℤ = {..., -2, -1, 0, 1, 2, ...}.
+`float` | Floating point numbers (also known as "floats", "doubles", or "real numbers") can be specified using any of the following syntaxes:
+`string` | A string is series of characters, where a character is the same as a byte. This means that PHP only supports a 256-character set, and hence does not offer native Unicode support. 
+`array` | An array in PHP is actually an ordered map. A map is a type that associates values to keys.
+`object` |
+`callable` |
+`iterable` | Iterable is a pseudo-type introduced in PHP 7.1. It accepts any array or object implementing the Traversable interface. Both of these types are iterable using foreach and can be used with yield from within a generator.
+`resource` | A resource is a special variable, holding a reference to an external resource. Resources are created and used by special functions.
+`NUll` | The special NULL value represents a variable with no value. NULL is the only possible value of type null.
+
+> **Note:** To check the type and value of an expression, use the `var_dump()` function.
+> To get a human-readable representation of a type for debugging, use the `gettype()` function. To check for a certain type, do not use `gettype()`, but rather the `is_type` functions. Some examples:
+
+```php
+<?php
+  $a_bool = TRUE;   // a boolean
+  $a_str  = "foo";  // a string
+  $an_int = 12;     // an integer
+  $a_float = 4.1; // a float
+  $an_arr = ["Gabriel", "Cacayan"]; // an array
+  $a_null; // a null
+
+
+  echo gettype($a_bool); // prints out:  boolean
+  echo gettype($a_str);  // prints out:  string
+  echo gettype($an_int);  // prints out:  interger
+  echo gettype($a_float); // prints out: double
+  echo gettype($an_arr); // prints out: array
+  echo gettype($a_null); // prints out: NULL
+```
+<p align="right">
+  <a href="https://github.com/gabriel-cacayan/php-cheatsheet#table-of-contents"> 
+  <strong><span>&#8613;</span> Back To Top</strong>
   </a>
 </p>
 
@@ -323,53 +372,6 @@ Magic constants | Description
 <p align="right">
   <a href="https://github.com/gabriel-cacayan/php-cheatsheet#table-of-contents"> 
     <strong><span>&#8613;</span> Back To Top</strong>
-  </a>
-</p>
-
-## Data Types
-
-PHP supports ten primitive types.
-
-**Four scalar types:** **_boolean_**, **_integer_**, **_float (floating-point number, aka double)_**, & **_string_**.
-
-**Four compound types:** **_array_**, **_object_**, **_callable_**, & **_iterable_**.
-
-**Special types:** **_resource_** and  **_NULL_**.
-
-Data Types | Description
------------- | -------------
-`boolean` | A boolean expresses a truth value. It can be either TRUE or FALSE.
-`integer` | An integer is a number of the set ℤ = {..., -2, -1, 0, 1, 2, ...}.
-`float` | Floating point numbers (also known as "floats", "doubles", or "real numbers") can be specified using any of the following syntaxes:
-`string` | A string is series of characters, where a character is the same as a byte. This means that PHP only supports a 256-character set, and hence does not offer native Unicode support. 
-`array` | An array in PHP is actually an ordered map. A map is a type that associates values to keys.
-`object` |
-`callable` |
-`iterable` | Iterable is a pseudo-type introduced in PHP 7.1. It accepts any array or object implementing the Traversable interface. Both of these types are iterable using foreach and can be used with yield from within a generator.
-`resource` | A resource is a special variable, holding a reference to an external resource. Resources are created and used by special functions.
-`NUll` | The special NULL value represents a variable with no value. NULL is the only possible value of type null.
-
-
-```php
-<?php
-  $a_bool = TRUE;   // a boolean
-  $a_str  = "foo";  // a string
-  $an_int = 12;     // an integer
-  $a_float = 4.1; // a float
-  $an_arr = ["Gabriel", "Cacayan"]; // an array
-  $a_null; // a null
-
-
-  echo gettype($a_bool); // prints out:  boolean
-  echo gettype($a_str);  // prints out:  string
-  echo gettype($an_int);  // prints out:  interger
-  echo gettype($a_float); // prints out: double
-  echo gettype($an_arr); // prints out: array
-  echo gettype($a_null); // prints out: NULL
-```
-<p align="right">
-  <a href="https://github.com/gabriel-cacayan/php-cheatsheet#table-of-contents"> 
-  <strong><span>&#8613;</span> Back To Top</strong>
   </a>
 </p>
 
