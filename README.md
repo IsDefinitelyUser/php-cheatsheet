@@ -720,12 +720,6 @@ foreach ($fruits as $fruit) {
 */      
 ```
 
-<p align="right">
-  <a href="https://github.com/gabriel-cacayan/php-cheatsheet#table-of-contents"> 
-  <strong><span>&#8613;</span> Back To Top</strong>
-  </a>
-</p>
-
 ### Associative Arrays
 
 Associative arrays are arrays that use named keys that you assign to them.
@@ -754,6 +748,12 @@ foreach ($persons as $name => $age) {
 
 */  
 ```
+
+<p align="right">
+  <a href="https://github.com/gabriel-cacayan/php-cheatsheet#table-of-contents"> 
+  <strong><span>&#8613;</span> Back To Top</strong>
+  </a>
+</p>
 
 ## Functions
 
