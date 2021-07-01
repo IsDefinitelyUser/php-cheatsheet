@@ -9,7 +9,7 @@
 </head>
 
 <body>
-	<?php include "includes/01_data_types.php"; ?>
+	<?php include "includes/02_variables.php"; ?>
 </body>
 
 </html>

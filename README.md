@@ -28,6 +28,8 @@
   - [continue](https://github.com/gabriel-cacayan/php-cheatsheet#continue)
   - [include](https://github.com/gabriel-cacayan/php-cheatsheet#include)
   - [require](https://github.com/gabriel-cacayan/php-cheatsheet#require)
+- [Arrays](https://github.com/gabriel-cacayan/php-cheatsheet#arrays)
+  - [Associative Arrays](https://github.com/gabriel-cacayan/php-cheatsheet#associative-arrays)
 - [Functions](https://github.com/gabriel-cacayan/php-cheatsheet#functions)
   - [Anonymous functions](https://github.com/gabriel-cacayan/php-cheatsheet#anonymous-functions)
   - [Arrow functions](https://github.com/gabriel-cacayan/php-cheatsheet#arrow-functions)
@@ -107,15 +109,21 @@ Everything outside of a pair of opening and closing tags is ignored by the PHP p
 
 ```php
 <p>This is going to be ignored by PHP and displayed by the browser.</p>
+
 <?php echo 'While this is going to be parsed.'; ?>
+
 <p>This will also be ignored by PHP and displayed by the browser.</p>
 
 
 // Example #1 Advanced escaping using conditions
 <?php if ($expression == true): ?>
-  This will show if the expression is true.
+
+  // This will show if the expression is true.
+
 <?php else: ?>
-  Otherwise this will show.
+
+  // Otherwise this will show.
+
 <?php endif; ?>
 ```
 
@@ -125,7 +133,9 @@ As in C or Perl, PHP requires instructions to be terminated with a semicolon at 
 
 ```php
 <?php echo "Some text"; ?>
+
 No newline
+
 <?= "But newline now" ?>
 ```
 ### Comments
@@ -138,8 +148,8 @@ PHP supports 'C', 'C++' and Unix shell-style (Perl style) comments. For example:
     /* This is a multi line comment
        yet another line of comment */
     echo 'This is yet another test';
+
     echo 'One Final Test'; # This is a one-line shell-style comment
-?>
 ```
 
 <p align="right">
@@ -180,7 +190,7 @@ Data Types | Description
   $a_str  = "foo";  // a string
   $an_int = 12;     // an integer
   $a_float = 4.1; // a float
-  $an_arr = ["Gabriel", "Cacayan"]; // an array
+  $an_arr = ["Apple", "Banana"]; // an array
   $a_null; // a null
 
 
@@ -430,13 +440,15 @@ Negation `-`|  Null Coalesce `??=` | Greater than `>` |
     $a = 5;
     $b = 10;
 
-    if ($a > $b) {
+  if ($a > $b) {
     echo "a is bigger than b";
   } elseif ($a < $b) {
     echo "b is bigger than a";
   }  else {
     echo "Invalid Input!";
   }
+
+  // Outputs: b is bigger than a
 ```
 
 ### ternary operator
@@ -447,6 +459,8 @@ Negation `-`|  Null Coalesce `??=` | Greater than `>` |
    $b = 10;
 
   echo $a > $b ? "a is greater than b": "b is greater than a";
+
+  // Outputs: b is bigger than a
 ```
 
 ### switch
@@ -467,6 +481,8 @@ Negation `-`|  Null Coalesce `??=` | Greater than `>` |
           echo "i equals 2";
           break;
   }
+
+   // i equals 2
 ```
 
 ### Alternative syntax for control structures
@@ -475,6 +491,8 @@ PHP offers an alternative syntax for some of its control structures; namely, if,
 
 ```php
 <?php
+  
+  $a = 5;
 
   if ($a == 5):
       echo "a equals 5";
@@ -485,6 +503,8 @@ PHP offers an alternative syntax for some of its control structures; namely, if,
   else:
       echo "a is neither 5 nor 6";
   endif;
+
+  // outputs: a equals 5...
 ```
 
 ### for
@@ -496,6 +516,17 @@ PHP offers an alternative syntax for some of its control structures; namely, if,
     
     echo $a . "<br>"; 
   }
+
+  /*
+    Outputs:
+    
+    0
+    1
+    2
+    3
+    4
+  
+  */
 ```
 
 ### while
@@ -509,6 +540,18 @@ PHP offers an alternative syntax for some of its control structures; namely, if,
     echo $a . "<br>";
     $a++;
   }
+
+
+   /*
+    Outputs:
+    
+    0
+    1
+    2
+    3
+    4
+  
+  */
 ```
 
 ### do-while
@@ -522,6 +565,17 @@ PHP offers an alternative syntax for some of its control structures; namely, if,
       echo $a . "<br>";
       $a++;
   } while ($a < 5);
+
+  /*
+    Outputs:
+    
+    0
+    1
+    2
+    3
+    4
+  
+  */
 ```
 
 ### foreach 
@@ -536,6 +590,8 @@ PHP offers an alternative syntax for some of its control structures; namely, if,
     echo $value; 
 
   }
+
+  // outputs: 12345
 ```
 
 ### break
@@ -548,6 +604,15 @@ PHP offers an alternative syntax for some of its control structures; namely, if,
        }
        echo $i . "<br>";
     }
+
+    /*
+    Outputs:
+    
+    0
+    1
+    2
+  
+  */
 ```
 
 ### continue
@@ -560,6 +625,16 @@ PHP offers an alternative syntax for some of its control structures; namely, if,
       }
     echo $i . "<br>";
   }
+
+   /*
+    Outputs:
+    
+    0
+    1
+    3
+    4
+  
+  */
 ```
 
 ### include
@@ -573,8 +648,8 @@ PHP offers an alternative syntax for some of its control structures; namely, if,
     <body>
         /* 
             1.) Including navbar file 
-            2.) Error message will occured when there is no file but, 
-            only for navbar.
+            2.) Error message will occured when there is no file, but the web 
+            will still execute.
         */
         <?php include "navbar.php"; ?>
         <?php
@@ -613,6 +688,67 @@ PHP offers an alternative syntax for some of its control structures; namely, if,
   </a>
 </p>
 
+## Arrays
+
+An array in PHP is actually an ordered map. A map is a type that associates values to keys. This type is optimized for several different uses; it can be treated as an array, list (vector), hash table (an implementation of a map), dictionary, collection, stack, queue, and probably more. As array values can be other arrays, trees and multidimensional arrays are also possible.
+
+```php
+// PHP Version: < 5.4
+$fruits = array("Apple", "Orange", "Banana");
+
+
+/* 
+    Using the short array syntax
+
+    PHP Version: >= 5.4
+*/
+
+$fruits = ["Apple", "Orange", "Banana"];
+
+foreach ($fruits as $fruit) {
+    var_dump($fruit);
+    echo "<br>";
+}
+
+/* 
+    Outputs: 
+
+    string(5) "Apple"
+    string(6) "Orange"
+    string(6) "Banana"
+
+*/      
+```
+
+### Associative Arrays
+
+Associative arrays are arrays that use named keys that you assign to them.
+
+```php
+<?php 
+// To loop through and print all the values of an associative array, you could use a foreach loop, like this:
+
+$persons = [
+  "Peter" => "35", 
+  "Ben" => "37", 
+  "Joe "=> "43"
+];
+
+foreach ($persons as $name => $age) {
+  echo "My name is $name and my age is $age.";
+  echo "<br>";
+}
+
+/* 
+    Outputs: 
+
+    My name is Peter and my age is 35
+    My name is Ben and my age is 37
+    My name is Joe and my age is 43
+
+*/  
+```
+
 ## Functions
 
 function with default arguments.
@@ -620,7 +756,7 @@ function with default arguments.
 ```php
 <?php
   
-     function add($a = 0, $b = 0) {
+    function add($a = 0, $b = 0) {
       return $a + $b;
     }
 
